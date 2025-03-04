@@ -1,10 +1,17 @@
 <?php
 
-use App\Http\Controllers\WeatherController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\WeatherController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/',[WelcomeController::class, 'Welcome'])
+Route::get('/',[HomeController::class, 'index'])
     ->name('welcome')->name('welcome');
-Route::get('/weather',[WeatherController::class,'index'])
-    ->name('weather');
+
+Route::controller(WeatherController::class)->group(function () {
+    Route::get('/weather/{id}','index')
+        ->name('weather');
+});
+
+
+
+
