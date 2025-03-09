@@ -1,8 +1,11 @@
+@php
+use App\Helpers\Helpers;
+@endphp
 <header class="bg-violet-900 h-[10vh] flex">
     <nav class="flex flex-row justify-between items-center pl-8">
         <div class="bg-yellow-200">
             <a href="/">
-                <img class="inline-block" src="{{secure_asset('logos/jago-logo.svg')}}" alt="jagolo">
+                <img class="inline-block" src="{{Helpers::assets('logos/jago-logo.svg')}}" alt="jagolo">
                 <span class="text-white text-2xl font-bold">JAGOLO</span>
             </a>
         </div>
