@@ -4,7 +4,9 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "css": "tailwindcss -i resources/css/app.css -o public/css/style.css --w"
+        "css": "tailwindcss -i resources/css/app.css -o public/css/style.css",
+        "css:watch": "tailwindcss -i resources/css/app.css -o public/css/style.css --watch",
+        "css:mini": "tailwindcss -i resources/css/app.css -o public/css/style.css --minify"
     },
     "devDependencies": {
         "@tailwindcss/cli": "^4.0.12",
