@@ -1,7 +1,7 @@
 services:
-  db:
+  dbsocial:
     image: mysql:latest
-    container_name: db
+    container_name: dbsocial
     environment:
       MYSQL_ROOT_PASSWORD: schlucht
       MYSQL_DATABASE: schlucht
