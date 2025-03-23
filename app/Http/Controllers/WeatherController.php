@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Weather;
 use App\Models\weather_table;
 use Illuminate\Http\Request;
 
-class Weather extends Controller
+class WeatherController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class Weather extends Controller
     public function index()
     {
         return view("weather.weather-list", [
-            "data" => weather_table::all(),
+            "data" => Weather::all(),
             "title" => "Wetter Liste",
         ]);
     }

@@ -1,6 +1,9 @@
+@php
+use App\Helpers\Helpers;
+@endphp
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">

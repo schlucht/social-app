@@ -4,21 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class weather_table extends Model
+class Weather extends Model
 {
     protected $fillable = [
         'type',
         'icon',
         'description'
     ];
+    protected $table = 'weathers';
 
     public function index()
     {
-        $data = weather_table::all();
+        $data = Weather::all();
     }
 
-    public function create()
-    {
-        return weather_table::create([]);
-    }
 }
